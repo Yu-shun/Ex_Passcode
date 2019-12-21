@@ -49,13 +49,17 @@
                 android:inputType="numberPassword"
                 android:hint="パスワード" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <ImageView
-            android:layout_width="170dp"
-            android:layout_height="146dp" app:srcCompat="@mipmap/ic_launcher_round"
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.498" android:layout_marginTop="30dp"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_launcher_round" />
 
     <Button
             android:id="@+id/login"

@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setTitle("Login")
 
         val setButton = findViewById<Button>(R.id.setting)
         val loginButton = findViewById<Button>(R.id.login)
@@ -30,6 +31,9 @@ class MainActivity : AppCompatActivity() {
             if (passcode.toString() == passEditText.text.toString() && username.toString() == usernameEditText.text.toString()) {
                 val toast =Toast.makeText(this, "ログイン成功",Toast.LENGTH_SHORT)
                 toast.show()
+                val intent = Intent(this,LoginActivity::class.java)
+                intent.putExtra("UserName", username)
+                startActivity(intent)
             }
         }
 
